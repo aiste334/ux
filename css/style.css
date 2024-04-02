@@ -1,0 +1,298 @@
+/* Quickfix/reset af browser */
+:root {
+    --text: rgb(85, 85, 85);
+    --color_1_a: rgb(255, 228, 196);
+    --color_2_a: rgb(210, 188, 161);
+    --background_a:rgba(140, 65, 11, .9);
+
+
+    --color_1_b: rgb(94, 142, 253);
+    --color_2_b: rgb(184, 206, 255);
+    --background_b:rgba(0, 46, 75, 0.9);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color:var(--text)
+    font-family: Helvetica, Arial, sans-serif;
+    /* fixed betyder, at billedet IKKE rykker med */
+    /* background-attachment:  fixed;  */
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+} 
+
+#header h1{
+    font-size: 1.6em;
+}
+
+
+#hero{
+    background-position:        center center;
+    background-repeat:          no-repeat;
+    background-size:            cover;
+    background-attachment:      fixed;
+    height: 60vh;
+}
+
+
+main{
+    padding: 4em 0;
+    background-color: rgba(227, 224, 220, .8);
+
+}
+
+section.contact{
+    margin-top: 4em;
+}
+
+footer{
+    padding: 4em 0 ;
+    width: 100%;
+} 
+
+h1, h2, p{
+    color: var(--text);
+}
+
+
+/* ------------------------------------------------------------
+
+NAVIGRATION 
+
+------------------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.navbar .nav-item{
+    margin: 0 15px;
+}
+
+
+.slogan{
+    font-size: .9em;
+    line-height: 12px;
+}
+
+
+#main .img_frame{
+    overflow: hidden;
+    margin-bottom: 1em;
+    max-width: 450px;
+}
+
+.img_frame img{
+    max-width: 450px;
+    width: 100%;
+    transition: transform .5s; /* Animation */
+}
+
+.img_frame img:hover{
+    transform         : rotate(5deg) scale(1.2);
+    position: relative;
+}
+
+
+/* Headlines */
+h2.headline{
+    margin: 1em 0;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+/* 
+    Style AF knapper 
+*/
+.btn{
+    margin-bottom: 1em;
+}
+
+.float-right{
+    float: right;
+}
+/* 
+    FORM STYLE 
+*/
+input,textarea {
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+    border:1px solid var(--color_2_a);
+  }
+
+form {
+    margin:50px auto; 
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+
+
+/* ------------------------------------------------------------
+
+
+    SPLIT TEST A
+    Alt stylingen fra test A skrives her 
+
+------------------------------------------------------------- */
+body#a_test{
+    background: url(img/dog-paw-footprint.png);
+}
+
+#a_test header{
+    background-color:var(--background_a);
+} 
+
+#a_test .slogan{
+    color: var(--color_1_a);
+}
+
+#a_test #hero{
+    background-image:           url("../page_a/img/dogs_group.jpg");
+}
+
+/* LINKS */
+#a_test .navbar, #a_test .navbar h1, #a_test .navbar a,#a_test #main a.btn,#a_test footer a {
+    color: var(--color_1_a)
+}
+
+#a_test .navbar:hover,#a_test .navbar h1:hover,#a_test .navbar a:hover,#a_test #main a.btn:hover,#a_test footer a:hover{
+    color: var(--color_2_a);
+}
+
+#a_test #main a.btn,#a_test input[type="submit"]{
+    background:  var(--color_2_a);
+    color: var(--color_1_a)
+} 
+
+#a_test #main a.btn:hover, #a_test input[type="submit"]:hover{
+    background:  var(--color_1_a);
+    color: var(--color_2_a);
+} 
+
+#a_test footer{
+    background-color:var(--background_a);
+} 
+
+/* ------------------------------------------------------------
+
+
+    SPLIT TEST B
+    Alt stylingen fra test B skrives her 
+
+------------------------------------------------------------- */
+body#b_test{
+    background: url(img/cat-paw-footprint.png);
+}
+#b_test header{
+    background-color:var(--background_b);
+} 
+
+#b_test .slogan{
+    color: var(--color_1_b);
+}
+
+
+#b_test #hero{
+    background-image:           url("../page_b/img/cats_group.jpg");
+}
+
+/* LINKS */
+#b_test .navbar, #b_test .navbar h1, #b_test .navbar a,#b_test #main a.btn,#b_test footer a {
+    color: var(--color_1_b)
+}
+
+#b_test .navbar:hover,#b_test .navbar h1:hover,#b_test .navbar a:hover,#b_test #main a.btn:hover,#b_test footer a:hover{
+    color: var(--color_2_b);
+}
+
+#b_test #main a.btn,#b_test input[type="submit"]{
+    background:  var(--color_2_b);
+    color: var(--color_1_b)
+} 
+
+#b_test #main a.btn:hover, #b_test input[type="submit"]:hover{
+    background:  var(--color_1_b);
+    color: var(--color_2_b);
+} 
+
+#b_test footer{
+    background-color:var(--background_b);
+} 
+
+
+
+
+/* ------------------------------------------------------------
+
+    HELP CLASSES
+    For Debugging 
+    
+------------------------------------------------------------- */
+
+.red{
+    color: red;
+}
+
+.red-bg{
+    background: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.blue-bg{
+    background: blue;
+}
+
+.green{
+    color: rgb(9, 255, 9);
+}
+
+.green-bg{
+    background: rgb(9, 255, 9);
+}
