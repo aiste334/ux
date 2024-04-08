@@ -1,9 +1,9 @@
 /* Quickfix/reset af browser */
 :root {
     --text: rgb(85, 85, 85);
-    --color_1_a: rgb(255, 228, 196);
-    --color_2_a: rgb(210, 188, 161);
-    --background_a:rgba(140, 65, 11, .9);
+    --color_1_a: rgba(255, 245, 233, 0.835);
+    --color_2_a: rgb(255, 255, 255);
+    --background_a:teal;
 
 
     --color_1_b: rgb(94, 142, 253);
@@ -46,7 +46,7 @@ header{
 
 main{
     padding: 4em 0;
-    background-color: rgba(227, 224, 220, .8);
+    background-color: rgba(255, 251, 246, 0.8);
 
 }
 
@@ -59,10 +59,38 @@ footer{
     width: 100%;
 } 
 
-h1, h2, p{
+h1, h2{
     color: var(--text);
 }
 
+.teal-button {
+    background-color: teal;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .teal-button:hover {
+    background-color: #008080; /* Darker teal color on hover */
+  }
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .square-image {
+    width: 30%; /* Adjust width as needed */
+    height: 0;
+    padding-bottom: 30%; /* 1:1 aspect ratio (square) */
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+  }
+  
 
 /* ------------------------------------------------------------
 
@@ -178,9 +206,6 @@ textarea {
     Alt stylingen fra test A skrives her 
 
 ------------------------------------------------------------- */
-body#a_test{
-    background: url(img/dog-paw-footprint.png);
-}
 
 #a_test header{
     background-color:var(--background_a);
@@ -191,7 +216,7 @@ body#a_test{
 }
 
 #a_test #hero{
-    background-image:           url("../page_a/img/dogs_group.jpg");
+    background-image:           url("../page_a/img/crafts2.jpg");
 }
 
 /* LINKS */
@@ -224,12 +249,7 @@ body#a_test{
     Alt stylingen fra test B skrives her 
 
 ------------------------------------------------------------- */
-body#b_test{
-    background: url(img/cat-paw-footprint.png);
-}
-#b_test header{
-    background-color:var(--background_b);
-} 
+
 
 #b_test .slogan{
     color: var(--color_1_b);
